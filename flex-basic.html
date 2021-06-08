@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base2.css">
+    <style>
+        .container{
+            display: flex;
+
+            /*========Flex container========*/
+            /*flex-direction: row;  /* row, row-reverse, column, column-reverse */
+            /*flex-wrap: wrap;  /* nowrap, wrap-reverse */
+            /*flex-flow: row wrap; /* combination of flex-direction and flex-wrap */
+            /*justify-content: flex-end; /* flex-start, flex-end, center, space-evenly, space-around, space-between*/
+            
+            
+            /*========Flex item========*/
+            flex-flow: row wrap; /*row, row-reverse, column, column-revers // nowrap, wrap-reverse*/
+            align-items: stretch;/* stretch, center, flex-start, flex-end, center, space-between, space-around, space-evenly */
+            /*align-content:center; /*center, flex-start, flex-end, center, space-between, space-around, space-evenly */
+        
+        }
+        .item{
+            
+            border: 1px solid red;
+            font-size: 50px;
+            padding: 100px;
+            flex-grow: 1; /* 0 and 1 */
+            flex-shrink: 1; /* 0 and 1 */
+            flex-basis: 100px;
+            flex: 1 1 100px; /*flex-grow : flex-shrink : flex-basis*/
+        }
+        .one{
+            order: 5; /*bigger order value will be at last. by default order is 0*/
+        }
+        .five{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three">3</div>
+        <div class="item four">4</div>
+        <div class="item five">5</div>
+        <div class="item six">6</div>
+    </div>
+</body>
+</html>
